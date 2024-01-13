@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import image from "./assets/img/Memory_Game_logo.png";
 import christmas_Sock from "./assets/img/a_Christmas_sock.png";
 import dog from "./assets/img/a_dog.png";
 import sun from "./assets/img/a_realistic_picture_of_the_SUN.png";
@@ -171,7 +170,7 @@ function App() {
           />
         ))}
       </div>
-      <h3>try : {turns}</h3>
+      <h3>Tries : {turns}</h3>
     </div>
   );
 }
