@@ -39,7 +39,7 @@
 }
 
 .card {
-  padding: 2em;
+  margin: 4px;
 }
 
 .read-the-docs {
@@ -53,5 +53,5 @@ img {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }

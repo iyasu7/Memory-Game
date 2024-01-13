@@ -138,8 +138,19 @@ function App() {
       setTurns((prevTurns) => prevTurns + 1);
     }
   }, [choiceOne, choiceTwo]);
-  
+
   useEffect(() => {
+    if (cards?.every((card) => card.matched === true)) {
+      alert("You won!");
+      if (window.confirm("Do you want to play again?")) {
+        shuffleCards();
+      }
+    }
+  }, [cards]);
+  useEffect(() => {
+    if (cards?.every((card) => card.matched === true)) {
+      alert("You won!");
+    }
     shuffleCards();
   }, []);
   const resetChoice = () => {
@@ -149,7 +160,7 @@ function App() {
     setDisabled(false);
   };
   return (
-    <>
+    <div className="App" >
       <h1>Memory Game</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-layout">
@@ -161,7 +172,7 @@ function App() {
         ))}
       </div>
       <h3>try : {turns}</h3>
-    </>
+    </div>
   );
 }
 
