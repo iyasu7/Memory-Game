@@ -132,10 +132,10 @@ function App() {
           });
         });
         resetChoice();
+      setTurns((prevTurns) => prevTurns + 1);
       } else {
         setTimeout(() => resetChoice(), 1000);
       }
-      setTurns((prevTurns) => prevTurns + 1);
     }
   }, [choiceOne, choiceTwo]);
 
